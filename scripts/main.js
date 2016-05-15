@@ -6,29 +6,8 @@ import { browserHistory } from 'react-router';
 // Bind Scope
 import autobind from 'autobind-decorator';
 
-/*
-  App
-*/
-@autobind
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      hs_data: {}
-    }
-  }
-
-  renderData(key) {
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>HOLA</h1>
-      </div>
-    )
-  }
-}
+// Components
+import App from './components/App';
 
 var routes = (
   <Router history={browserHistory}>

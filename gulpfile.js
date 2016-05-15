@@ -5,14 +5,11 @@ var buffer = require('vinyl-buffer');
 // Gulp – compile & minify files, run server, watch for changes
 var gulp = require('gulp');
 var gutil = require('gulp-util');                     // better error messages
-var sass = require('gulp-sass');
-// var stylus = require('gulp-stylus');                  // compile .styl files to CSS
-// var autoprefixer = require('gulp-autoprefixer');      // auto-prefix CSS
+var stylus = require('gulp-stylus');                  // compile .styl files to CSS
+var autoprefixer = require('gulp-autoprefixer');      // auto-prefix CSS
 var imagemin = require('gulp-imagemin');              // compress images
 var cache = require('gulp-cache');                    // compress only new images
 var notify = require('gulp-notify');                  // notify of errors
-
-var del = require('del');                             // delete unneeded files from build
 
 var babelify = require('babelify');
 var browserify = require('browserify');
@@ -38,7 +35,7 @@ gulp.task('styles',function() {
   Images
 */
 gulp.task('images',function(){
-  gulp.src('images/**')
+  gulp.src('resources/images/**')
     .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
     .pipe(gulp.dest('./build/images/'))
 });
@@ -47,15 +44,8 @@ gulp.task('images',function(){
   Resources
 */
 gulp.task('resources',function(){
-  gulp.src('resources/**')
+  gulp.src('resources/**.json')
     .pipe(gulp.dest('./build/resources/'))
-});
-
-/*
-  Clean Build
-*/
-gulp.task('clean', function() {
-    return del(['build/*.js', 'build/css/*.css', 'build/images/**.*']);
 });
 
 /*
@@ -115,7 +105,7 @@ gulp.task('scripts', function() {
 });
 
 // run 'scripts' task first, then watch for future changes
-gulp.task('default', ['images','styles','scripts','resources','clean','browser-sync'], function() {
-  gulp.watch('css/**/*', ['styles']); // gulp watch for stylus changes
+gulp.task('default', ['images','styles','scripts','resources','browser-sync'], function() {
+  gulp.watch('css/**/*', ['styles']); // gulp watch for CSS changes
   return buildScript('main.js', true); // browserify watch for JS changes
 });
