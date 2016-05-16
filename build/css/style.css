@@ -2,23 +2,41 @@ body {
   font-family: 'Work Sans', Helvetica, Arial, sans-serif;
   padding: 20px;
 }
+.profile-widget {
+  box-shadow: -2px -2px 16px -4px #776b5e;
+}
 .profile-header {
   background-color: #b1a599;
-  border-radius: 5px;
-  box-shadow: -2px -2px 16px -4px #776b5e;
+  border-radius: 5px 5px 0 0;
   padding: 20px 10px;
 }
 .profile-header h5 {
   color: #fff;
-  font-size: 18px;
+  font-size: 1.3em;
   font-weight: 500;
+  text-transform: uppercase;
 }
 .profile-header .subtitle {
   color: #776b5e;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 1em;
+  font-weight: 300;
 }
 .img-padded {
   border: 1px solid #776b5e;
   padding: 7px;
+}
+.profile-menu {
+  background-color: #f7f7f7;
+}
+.profile-menu li {
+  font-size: 1.1em;
+  font-weight: 300;
+  padding: 10px 30px;
+}
+.profile-menu li:hover,
+.profile-menu li .current-item {
+  background-color: #f6f0ec;
+}
+.profile-menu li a {
+  color: inherit;
 }

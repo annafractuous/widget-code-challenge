@@ -12,8 +12,15 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      hs_data: {}
+      details: {}
     }
+  }
+
+  componentWillMount() {
+    var userDetails = require("../../resources/details.json");
+    this.setState({
+      details: userDetails
+    })
   }
 
   renderData(key) {
@@ -22,7 +29,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="col-xs-12 col-sm-12 col-md-4 col-md-4-offset-2 col-lg-4 col-lg-4-offset-2">
-        <SidebarMenu />
+        <SidebarMenu details={this.state.details["1"]}/>
       </div>
     )
   }

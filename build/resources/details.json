@@ -1,0 +1,16 @@
+{
+  "1": {
+    "firstName": "Courtney",
+    "lastName": "Timmons",
+    "image": "./profile-avatar-1"
+  },
+  "2": {
+    "firstName": "John",
+    "lastName": "Raymons",
+    "image": "./profile-avatar-2",
+    "tagline": "Your talent amazes! This is awesome. Excited to see the final product.",
+    "profile-views": "172",
+    "comments": "34",
+    "likes": "210"
+  }
+}
