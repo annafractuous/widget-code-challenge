@@ -1,4 +1,24 @@
+body {
+  font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+  padding: 20px;
+}
+.profile-header {
+  background-color: #b1a599;
+  border-radius: 5px;
+  box-shadow: -2px -2px 16px -4px #776b5e;
+  padding: 20px 10px;
+}
+.profile-header h5 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+.profile-header .subtitle {
+  color: #776b5e;
+  font-size: 12px;
+  font-weight: 400;
+}
 .img-padded {
-  border: 1px solid #808080;
-  padding: 5px;
+  border: 1px solid #776b5e;
+  padding: 7px;
 }

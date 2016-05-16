@@ -21,11 +21,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="col-xs-12 col-sm-12 col-md-3 col-md-3-offset-2 col-lg-3 col-lg-3-offset-2">
-        <h1>HOLA</h1>
+      <div className="col-xs-12 col-sm-12 col-md-4 col-md-4-offset-2 col-lg-4 col-lg-4-offset-2">
         <SidebarMenu />
-        <div className="col-md-4">
-        </div>
       </div>
     )
   }
