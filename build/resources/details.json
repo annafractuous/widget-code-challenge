@@ -1,13 +1,16 @@
+/* image routes relative to component path */
+
 {
   "1": {
     "firstName": "Courtney",
     "lastName": "Timmons",
-    "image": "./profile-avatar-1"
+    "image": "../../resources/images/user1/profile-avatar-1.jpg",
+    "followers": "15,323"
   },
   "2": {
     "firstName": "John",
     "lastName": "Raymons",
-    "image": "./profile-avatar-2",
+    "image": "../../resources/images/user2/profile-avatar-2.jpg",
     "tagline": "Your talent amazes! This is awesome. Excited to see the final product.",
     "profile-views": "172",
     "comments": "34",

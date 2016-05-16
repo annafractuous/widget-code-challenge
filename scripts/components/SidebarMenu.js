@@ -9,39 +9,35 @@ class SidebarMenu extends React.Component {
     var details = this.props.details;
     return (
       <fieldset className="profile-widget">
-        <div className="row profile-header">
-          <div className="col-md-4">
+        <header className="row">
+          <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <ProfilePic url={details.image}/>
           </div>
-          <div className="col-md-8">
-            <h5>{details.firstName} <br/> {details.lastName}</h5>
+          <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <h4>{details.firstName}<br/>{details.lastName}</h4>
             <span className="subtitle">{details.followers} followers</span>
           </div>
-        </div>
-        <div className="row profile-menu">
-          <ul className="nav nav-pills nav-stacked">
-            <li>
-              <a href="#">
+        </header>
+        <nav className="row">
+          <ul className="nav nav-stacked">
+            <a href="#" className="no-underline"><li>
                 Edit user
-              </a>
-            </li>
-            <li className="current-item">
-              <a href="#">
+                <span className="glyphicon glyphicon-user" aria-hidden="true"></span>
+            </li></a>
+            <a href="#" className="no-underline"><li className="current-item">
                 Web statistics
-              </a>
-            </li>
-            <li>
-              <a href="#">
+                <span className="glyphicon glyphicon-stats" aria-hidden="true"></span>
+            </li></a>
+            <a href="#" className="no-underline"><li>
                 Upload settings
-              </a>
-            </li>
-            <li>
-              <a href="#">
+                <span className="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+              </li></a>
+            <a href="#" className="no-underline"><li>
                 Events
-              </a>
-            </li>
+                <span className="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+            </li></a>
           </ul>
-        </div>
+        </nav>
       </fieldset>
     )
   }

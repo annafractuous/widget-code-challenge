@@ -1,38 +1,15 @@
 @require './_*.styl'
 
 body
-  font-family 'Work Sans', Helvetica, Arial, sans-serif
   padding 20px
 
-.profile-widget
-  box-shadow -2px -2px 16px -4px #776B5e
+// override Bootstrap link styling
+.no-underline
+  color inherit
+  &:hover
+    text-decoration none !important
 
-.profile-header
-  background-color light-brown
-  border-radius 5px 5px 0 0
-  padding 20px 10px
-  h5
-    color white
-    font-size 1.3em
-    font-weight 500
-    text-transform uppercase
-  .subtitle
-    color dark-brown
-    font-size 1em
-    font-weight 300
-
+// round avatar image
 .img-padded
   border 1px solid dark-brown
   padding 7px
-
-.profile-menu
-  background-color light-grey
-  li
-    font-size 1.1em
-    font-weight 300
-    padding 10px 30px
-    &:hover,
-    .current-item
-      background-color light-tan
-    a
-      color inherit
