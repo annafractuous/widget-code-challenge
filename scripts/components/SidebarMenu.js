@@ -1,5 +1,4 @@
 import React from 'react';
-import autobind from 'autobind-decorator';
 
 // Components
 import ProfilePic from './ProfilePic';
@@ -8,7 +7,7 @@ class SidebarMenu extends React.Component {
   render () {
     var details = this.props.details;
     return (
-      <fieldset className="profile-widget">
+      <fieldset className="sidebar-widget">
         <header className="row">
           <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
             <ProfilePic url={details.image}/>

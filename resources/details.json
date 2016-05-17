@@ -11,8 +11,9 @@
     "firstName": "John",
     "lastName": "Raymons",
     "image": "../../resources/images/profile-avatar-2.jpg",
+    "coverImage": "../../resources/images/user-cover-img.jpg",
     "tagline": "Your talent amazes! This is awesome. Excited to see the final product.",
-    "profile-views": "172",
+    "profileViews": "172",
     "comments": "34",
     "likes": "210"
   }

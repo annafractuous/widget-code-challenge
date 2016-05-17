@@ -1,13 +1,12 @@
 import React from 'react';
-import autobind from 'autobind-decorator';
 
 // Components
 import SidebarMenu from './SidebarMenu';
+import UserWidget from './UserWidget';
 
 /*
   App
 */
-@autobind
 class App extends React.Component {
   constructor() {
     super();
@@ -25,8 +24,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <SidebarMenu details={this.state.details["1"]}/>
+      <div className="container">
+        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 widget-area">
+          <SidebarMenu details={this.state.details["1"]}/>
+        </div>
+        <div className="col-xs-12 col-sm-6 col-md-5 col-lg-5 widget-area">
+          <UserWidget details={this.state.details["2"]}/>
+        </div>
       </div>
     )
   }
