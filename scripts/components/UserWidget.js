@@ -20,6 +20,25 @@ class UserWidget extends React.Component {
             <span className="subtitle">{details.tagline}</span>
           </div>
         </section>
+        <nav className="row">
+          <ul className="nav nav-pills social-buttons">
+
+            <li className="first"><span>
+              <span className="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+              {details.profileViews}
+            </span></li>
+
+            <li><span>
+              <span className="glyphicon glyphicon-comment" aria-hidden="true"></span>
+              {details.comments}
+            </span></li>
+
+            <li className="liked"><span>
+              <span className="glyphicon glyphicon-heart" aria-hidden="true"></span>
+              {details.likes}
+            </span></li>
+          </ul>
+        </nav>
       </fieldset>
     )
   }

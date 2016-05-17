@@ -1,5 +1,5 @@
 .sidebar-widget header,
-nav {
+.sidebar-widget nav {
   box-shadow: -2px -2px 16px -4px #776b5e;
 }
 .sidebar-widget header {
@@ -28,7 +28,7 @@ nav {
   color: #e55f3a;
 }
 .sidebar-widget nav li:hover:not(.current-item) {
-  font-weight: 700;
+  font-weight: 500;
 }
 .sidebar-widget nav li:hover:not(.current-item) span {
   color: #776b5e;
@@ -53,9 +53,13 @@ h5 {
 .glyphicon {
   color: #b1a599;
 }
-.user-widget header,
-section {
+.user-widget {
   box-shadow: -2px -2px 16px -4px #776b5e;
+}
+.user-widget header,
+.user-widget section,
+.user-widget nav {
+  margin: 0px;
 }
 .user-widget header {
   border-radius: 5px 5px 0 0;
@@ -66,18 +70,46 @@ section {
   max-width: 100%;
 }
 .user-widget section {
-  border-radius: 0 0 5px 5px;
-  padding: 20px;
+  padding: 20px 0;
 }
 .user-widget section h2 {
+  padding-left: 0;
   margin-top: 7px;
 }
 .user-widget section img {
   position: absolute;
   left: 50%;
-  width: 92px;
-  height: 92px;
-  margin-left: -46px;
+  width: 96px;
+  height: 96px;
+  margin-left: -48px;
+}
+.user-widget nav {
+  background-color: #f6f0ec;
+  border-radius: 0 0 5px 5px;
+}
+.user-widget nav li {
+  height: 50px;
+  width: 33%;
+  color: #b1a599;
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: center;
+}
+.user-widget nav li:not(.first) {
+  border-left: 2px solid #fff;
+  width: 31%;
+}
+.user-widget nav li:hover span {
+  color: #776b5e;
+}
+.user-widget nav li.liked span {
+  color: #e55f3a;
+}
+.user-widget nav .glyphicon {
+  padding-right: 10px;
+  vertical-align: middle;
+  margin-top: -5px;
 }
 body {
   padding: 20px;

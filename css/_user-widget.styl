@@ -1,5 +1,7 @@
-.user-widget header, section
+.user-widget
   box-shadow -2px -2px 16px -4px dark-brown
+  header, section, nav
+    margin 0px
 
 .user-widget header
   border-radius 5px 5px 0 0
@@ -10,19 +12,42 @@
     max-width 100%
 
 .user-widget section
-  border-radius 0 0 5px 5px
-  padding 20px
+  padding 20px 0
 
-  // set margin equal to avatar image padding
   h2
+    padding-left 0
+    // set margin equal to avatar image padding
     margin-top 7px
 
   // horizontally center avatar
   img
     position absolute
     left 50%
-    width 92px
-    height 92px
+    width 96px
+    height 96px
     margin-left -(@width / 2)
 
-    // make the h2 an h3 for smaller screens
+.user-widget nav
+  background-color light-tan
+  border-radius 0 0 5px 5px
+
+  li
+    height 50px
+    width 33%
+    color light-brown
+    font-size 1.5em
+    font-weight 500
+    line-height 50px
+    text-align center
+    &:not(.first)
+      border-left 2px solid white
+      width @width - 2px
+    &:hover span
+      color dark-brown
+    &.liked span
+      color red
+
+  .glyphicon
+    padding-right 10px
+    vertical-align middle
+    margin-top -5px
