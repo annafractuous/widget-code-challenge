@@ -5,6 +5,7 @@ import ProfilePic from './ProfilePic';
 
 class UserWidget extends React.Component {
   toggleLiked(event) {
+    event.preventDefault();
     var button = event.currentTarget;
     if (button.className === "liked") {
       button.className = "";
@@ -33,20 +34,21 @@ class UserWidget extends React.Component {
         <nav className="row">
           <ul className="nav nav-pills social-buttons">
 
-            <li className="first"><span>
+            <li className="first"><a href="#" className="no-underline"><span>
               <span className="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
               {details.profileViews}
-            </span></li>
+            </span></a></li>
 
-            <li><span>
+            <li><a href="#" className="no-underline"><span>
               <span className="glyphicon glyphicon-comment" aria-hidden="true"></span>
               {details.comments}
-            </span></li>
+            </span></a></li>
 
-            <li className="liked" onClick={this.toggleLiked.bind(this)}><span>
+            <li className="liked" onClick={this.toggleLiked.bind(this)}><a href="#" className="no-underline"><span>
               <span className="glyphicon glyphicon-heart" aria-hidden="true"></span>
               {details.likes}
-            </span></li>
+            </span></a></li>
+
           </ul>
         </nav>
       </fieldset>

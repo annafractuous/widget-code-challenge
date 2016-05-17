@@ -54,6 +54,7 @@ h5 {
   color: #b1a599;
 }
 .user-widget {
+  border-radius: 5px;
   box-shadow: -2px -2px 16px -4px #776b5e;
 }
 .user-widget header,
@@ -65,6 +66,7 @@ h5 {
   border-radius: 5px 5px 0 0;
 }
 .user-widget header img {
+  border-radius: 5px 5px 0 0;
   min-width: 100%;
   min-height: 100%;
   max-width: 100%;
@@ -83,11 +85,11 @@ h5 {
   height: 96px;
   margin-left: -48px;
 }
-.user-widget nav {
+.social-buttons {
   background-color: #f6f0ec;
   border-radius: 0 0 5px 5px;
 }
-.user-widget nav li {
+.social-buttons li {
   height: 50px;
   width: 33%;
   color: #b1a599;
@@ -96,17 +98,21 @@ h5 {
   line-height: 50px;
   text-align: center;
 }
-.user-widget nav li:not(.first) {
+.social-buttons li:not(.first) {
   border-left: 2px solid #fff;
   width: 31%;
 }
-.user-widget nav li:hover span {
+.social-buttons li:hover span {
   color: #776b5e;
 }
-.user-widget nav li.liked span {
+.social-buttons li.liked span {
   color: #e55f3a;
 }
-.user-widget nav .glyphicon {
+.social-buttons li a:hover,
+.social-buttons li a:focus {
+  background-color: inherit;
+}
+.social-buttons .glyphicon {
   padding-right: 10px;
   vertical-align: middle;
   margin-top: -5px;
@@ -119,6 +125,7 @@ body {
 }
 .no-underline {
   color: inherit;
+  padding: 0px !important;
 }
 .no-underline:hover,
 .no-underline:focus {

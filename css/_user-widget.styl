@@ -1,4 +1,5 @@
 .user-widget
+  border-radius 5px
   box-shadow -2px -2px 16px -4px dark-brown
   header, section, nav
     margin 0px
@@ -7,6 +8,7 @@
   border-radius 5px 5px 0 0
 
   img
+    border-radius 5px 5px 0 0
     min-width 100%
     min-height 100%
     max-width 100%
@@ -27,7 +29,7 @@
     height 96px
     margin-left -(@width / 2)
 
-.user-widget nav
+.social-buttons
   background-color light-tan
   border-radius 0 0 5px 5px
 
@@ -46,6 +48,9 @@
       color dark-brown
     &.liked span
       color red
+
+    a:hover, a:focus
+      background-color inherit
 
   .glyphicon
     padding-right 10px
