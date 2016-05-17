@@ -4,6 +4,16 @@ import React from 'react';
 import ProfilePic from './ProfilePic';
 
 class UserWidget extends React.Component {
+  toggleLiked(event) {
+    var button = event.currentTarget;
+    if (button.className === "liked") {
+      button.className = "";
+    }
+    else {
+      button.className = "liked";
+    }
+  }
+
   render () {
     var details = this.props.details;
     return (
@@ -33,7 +43,7 @@ class UserWidget extends React.Component {
               {details.comments}
             </span></li>
 
-            <li className="liked"><span>
+            <li className="liked" onClick={this.toggleLiked.bind(this)}><span>
               <span className="glyphicon glyphicon-heart" aria-hidden="true"></span>
               {details.likes}
             </span></li>

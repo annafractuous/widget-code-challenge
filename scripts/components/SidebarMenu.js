@@ -4,6 +4,15 @@ import React from 'react';
 import ProfilePic from './ProfilePic';
 
 class SidebarMenu extends React.Component {
+  addActiveClass(event) {
+    var currentlySelected = document.getElementsByClassName('current-item')[0];
+    var justPressed = event.currentTarget.getElementsByTagName('li')[0];
+    if (currentlySelected !== justPressed) {
+      currentlySelected.className = currentlySelected.className.replace("current-item", "");
+      justPressed.className += " current-item";
+    }
+  }
+
   render () {
     var details = this.props.details;
     return (
@@ -19,19 +28,19 @@ class SidebarMenu extends React.Component {
         </header>
         <nav className="row">
           <ul className="nav nav-stacked">
-            <a href="#" className="no-underline"><li>
+            <a href="#" className="no-underline" onClick={this.addActiveClass.bind(this)}><li>
                 Edit user
                 <span className="glyphicon glyphicon-user" aria-hidden="true"></span>
             </li></a>
-            <a href="#" className="no-underline"><li className="current-item">
+            <a href="#" className="no-underline" onClick={this.addActiveClass.bind(this)}><li className="current-item">
                 Web statistics
                 <span className="glyphicon glyphicon-stats" aria-hidden="true"></span>
             </li></a>
-            <a href="#" className="no-underline"><li>
+            <a href="#" className="no-underline" onClick={this.addActiveClass.bind(this)}><li>
                 Upload settings
                 <span className="glyphicon glyphicon-wrench" aria-hidden="true"></span>
               </li></a>
-            <a href="#" className="no-underline"><li>
+            <a href="#" className="no-underline" onClick={this.addActiveClass.bind(this)}><li>
                 Events
                 <span className="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
             </li></a>
