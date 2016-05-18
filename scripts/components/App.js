@@ -24,7 +24,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid">
         <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 widget-area">
           <SidebarMenu details={this.state.details["1"]} />
         </div>

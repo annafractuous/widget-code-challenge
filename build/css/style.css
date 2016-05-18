@@ -1,3 +1,17 @@
+@media (max-width: 480px) {
+  body {
+    padding: 0;
+  }
+  .widget-area {
+    margin-bottom: 10px;
+  }
+  .widget-area h2 {
+    font-size: 1.7em;
+  }
+}
+.sidebar-widget {
+  padding: 0 15px;
+}
 .sidebar-widget header,
 .sidebar-widget nav {
   box-shadow: -2px -2px 16px -4px #776b5e;
@@ -118,10 +132,10 @@ h5 {
   margin-top: -5px;
 }
 body {
-  padding: 20px;
+  padding: 1%;
 }
 .widget-area {
-  margin: 20px;
+  margin: 1%;
 }
 .no-underline {
   color: inherit;
