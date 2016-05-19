@@ -16,6 +16,14 @@ body {
     font-size: 1.7em;
   }
 }
+@media (min-width: 481px) and (max-width: 768px) {
+  .sidebar-widget {
+    max-width: 350px;
+  }
+  .user-widget {
+    max-width: 600px;
+  }
+}
 .sidebar-widget {
   padding: 0 15px;
 }
