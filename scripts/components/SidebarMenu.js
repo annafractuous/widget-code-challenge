@@ -32,22 +32,22 @@ class SidebarMenu extends React.Component {
 
             <a href="#" className="no-underline" onClick={this.addActiveClass.bind(this)}><li>
                 Edit user
-                <span className="glyphicon glyphicon-user" aria-hidden="true"></span>
+                <span className="icon icon-user" aria-hidden="true"></span>
             </li></a>
 
             <a href="#" className="no-underline" onClick={this.addActiveClass.bind(this)}><li className="current-item">
                 Web statistics
-                <span className="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                <span className="icon icon-stats-bars" aria-hidden="true"></span>
             </li></a>
 
             <a href="#" className="no-underline" onClick={this.addActiveClass.bind(this)}><li>
                 Upload settings
-                <span className="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+                <span className="icon icon-wrench" aria-hidden="true"></span>
               </li></a>
 
             <a href="#" className="no-underline" onClick={this.addActiveClass.bind(this)}><li>
                 Events
-                <span className="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                <span className="icon icon-location" aria-hidden="true"></span>
             </li></a>
 
           </ul>

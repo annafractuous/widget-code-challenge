@@ -35,17 +35,17 @@ class UserWidget extends React.Component {
           <ul className="nav nav-pills social-buttons">
 
             <li className="first"><a href="#" className="no-underline"><span>
-              <span className="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+              <span className="icon icon-eye" aria-hidden="true"></span>
               {details.profileViews}
             </span></a></li>
 
             <li><a href="#" className="no-underline"><span>
-              <span className="glyphicon glyphicon-comment" aria-hidden="true"></span>
+              <span className="icon icon-bubble" aria-hidden="true"></span>
               {details.comments}
             </span></a></li>
 
             <li className="liked" onClick={this.toggleLiked.bind(this)}><a href="#" className="no-underline"><span>
-              <span className="glyphicon glyphicon-heart" aria-hidden="true"></span>
+              <span className="icon icon-heart" aria-hidden="true"></span>
               {details.likes}
             </span></a></li>
 

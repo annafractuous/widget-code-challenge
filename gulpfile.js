@@ -32,6 +32,15 @@ gulp.task('styles',function() {
 });
 
 /*
+  Icons
+*/
+gulp.task('icons',function(){
+  gulp.src('css/icons/**')
+    .pipe(gulp.dest('./build/css/icons/'))
+});
+
+
+/*
   Images
 */
 gulp.task('images',function(){
@@ -105,7 +114,7 @@ gulp.task('scripts', function() {
 });
 
 // run 'scripts' task first, then watch for future changes
-gulp.task('default', ['images','styles','scripts','resources','browser-sync'], function() {
+gulp.task('default', ['images','icons','styles','scripts','resources','browser-sync'], function() {
   gulp.watch('css/**/*', ['styles']); // gulp watch for CSS changes
   return buildScript('main.js', true); // browserify watch for JS changes
 });

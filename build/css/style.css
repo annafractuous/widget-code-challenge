@@ -1,3 +1,44 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("icons/fonts/icomoon.eot?9xaor5");
+  src: url("icons/fonts/icomoon.eot?9xaor5#iefix") format('embedded-opentype'), url("icons/fonts/icomoon.ttf?9xaor5") format('truetype'), url("icons/fonts/icomoon.woff?9xaor5") format('woff'), url("icons/fonts/icomoon.svg?9xaor5#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.icon {
+  color: #b1a599;
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+/* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-location:before {
+  content: "\e947";
+}
+.icon-bubble:before {
+  content: "\e96b";
+}
+.icon-user:before {
+  content: "\e971";
+}
+.icon-wrench:before {
+  content: "\e991";
+}
+.icon-stats-bars:before {
+  content: "\e99c";
+}
+.icon-eye:before {
+  content: "\e9ce";
+}
+.icon-heart:before {
+  content: "\e9da";
+}
 body {
   padding: 1%;
 }
@@ -62,7 +103,7 @@ body {
 .sidebar-widget nav li:hover:not(.current-item) span {
   color: #776b5e;
 }
-.sidebar-widget nav .glyphicon {
+.sidebar-widget nav .icon {
   float: right;
 }
 body {
@@ -78,9 +119,6 @@ h5 {
 }
 .subtitle {
   font-weight: 300;
-}
-.glyphicon {
-  color: #b1a599;
 }
 .user-widget {
   border-radius: 5px;
@@ -141,7 +179,7 @@ h5 {
 .social-buttons li a:focus {
   background-color: inherit;
 }
-.social-buttons .glyphicon {
+.social-buttons .icon {
   padding-right: 10px;
   vertical-align: middle;
   margin-top: -5px;
