@@ -2,58 +2,70 @@ import React from 'react';
 
 // Components
 import ProfilePic from './ProfilePic';
+import MenuButton from './MenuButton';
+import LikeButton from './LikeButton';
 
 class UserWidget extends React.Component {
-  toggleLiked(event) {
-    event.preventDefault();
-    var button = event.currentTarget;
-    if (button.className === "liked") {
-      button.className = "";
+    constructor(props) {
+        super(props);
+        this.state = {
+            current: ''
+        }
     }
-    else {
-      button.className = "liked";
+
+    checkIfActive (ref) {
+        return !!(this.state.current === ref);
     }
-  }
 
-  render () {
-    var details = this.props.details;
-    return (
-      <fieldset className="user-widget">
-        <header className="row">
-          <img src={details.coverImage} alt="user-cover-image"/>
-        </header>
-        <section className="row">
-          <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 image-wrapper">
-            <ProfilePic url={details.image}/>
-          </div>
-          <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-wrapper">
-            <h2>{details.firstName + " " + details.lastName}</h2>
-            <span className="subtitle">{details.tagline}</span>
-          </div>
-        </section>
-        <nav className="row">
-          <ul className="nav nav-pills social-buttons">
+    toggleActive (i, event) {
+        event.preventDefault();
+        this.setState({
+            current: (this.state.current === i ? '' : i)
+        });
+    }
 
-            <li className="first"><a href="#" className="no-underline"><span>
-              <span className="icon icon-eye" aria-hidden="true"></span>
-              {details.profileViews}
-            </span></a></li>
+    render () {
+        // next question: where to best declare & how to best update these user details to pass to the widget
+        var user = this.props.user;
+        var buttonDeets = [
+            { text: user.profileViews,
+              icon: 'icon-eye' },
+            { text: user.comments,
+              icon: 'icon-bubble' }
+        ];
+        var likeDeets = {
+            text: user.likes,
+            icon: 'icon-heart'
+        };
+        return (
+          <fieldset className="user-widget">
 
-            <li><a href="#" className="no-underline"><span>
-              <span className="icon icon-bubble" aria-hidden="true"></span>
-              {details.comments}
-            </span></a></li>
+            <header className="row">
+              <img src={user.coverImage} alt="user-cover-image"/>
+            </header>
 
-            <li className="liked" onClick={this.toggleLiked.bind(this)}><a href="#" className="no-underline"><span>
-              <span className="icon icon-heart" aria-hidden="true"></span>
-              {details.likes}
-            </span></a></li>
+            <section className="row">
+              <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 image-wrapper">
+                <ProfilePic url={user.image}/>
+              </div>
+              <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-wrapper">
+                <h2>{user.firstName + " " + user.lastName}</h2>
+                <span className="subtitle">{user.tagline}</span>
+              </div>
+            </section>
 
-          </ul>
-        </nav>
-      </fieldset>
-    )
-  }
+            <nav className="row">
+              <ul className="nav nav-pills social-buttons">
+                  {buttonDeets.map((item, i) => {
+                      return <MenuButton current={this.checkIfActive(i)} details={item} onClick={this.toggleActive.bind(this, i)} key={i}/>
+                  }, this)}
+                  <LikeButton details={likeDeets} />
+              </ul>
+            </nav>
+
+          </fieldset>
+        )
+    }
 }
 
 export default UserWidget;

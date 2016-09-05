@@ -155,29 +155,41 @@ h5 {
 .social-buttons {
   background-color: #f6f0ec;
   border-radius: 0 0 5px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.social-buttons li {
+.social-buttons a {
+  width: 100%;
+}
+.social-buttons a:hover,
+.social-buttons a:focus {
+  background-color: inherit;
+}
+.social-buttons a li {
   height: 50px;
-  width: 33%;
   color: #b1a599;
   font-size: 1.5em;
   font-weight: 500;
   line-height: 50px;
   text-align: center;
 }
-.social-buttons li:not(.first) {
-  border-left: 1px solid #fff;
-  width: 31%;
-}
-.social-buttons li:hover span {
+.social-buttons a li:hover,
+.social-buttons a li:hover span,
+.social-buttons a li.current-item,
+.social-buttons a li.current-item span {
   color: #776b5e;
 }
-.social-buttons li.liked span {
+.social-buttons a li.liked,
+.social-buttons a li.liked span {
   color: #e55f3a;
 }
-.social-buttons li a:hover,
-.social-buttons li a:focus {
-  background-color: inherit;
+.social-buttons a:not(:first-child) li {
+  border-left: 1px solid #fff;
+  width: 98%;
 }
 .social-buttons .icon {
   padding-right: 10px;

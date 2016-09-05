@@ -32,25 +32,30 @@
 .social-buttons
   background-color light-tan
   border-radius 0 0 5px 5px
+  display flex
+  justify-content space-between
 
-  li
-    height 50px
-    width 33%
-    color light-brown
-    font-size 1.5em
-    font-weight 500
-    line-height 50px
-    text-align center
-    &:not(.first)
-      border-left 1px solid white
-      width @width - 2px
-    &:hover span
-      color dark-brown
-    &.liked span
-      color red
-
-    a:hover, a:focus
+  a
+    width 100%
+    &:hover, &:focus
       background-color inherit
+
+    li
+      height 50px
+      color light-brown
+      font-size 1.5em
+      font-weight 500
+      line-height 50px
+      text-align center
+      &:hover, &:hover span, &.current-item, &.current-item span
+        color dark-brown
+      &.liked, &.liked span
+        color red
+
+    &:not(:first-child)
+      li
+        border-left 1px solid white
+        width @width - 2px
 
   .icon
     padding-right 10px

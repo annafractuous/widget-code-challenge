@@ -1,0 +1,13 @@
+[{
+    "text": "Edit user",
+    "icon": "icon-user"
+},{
+    "text": "Web Statistics",
+    "icon": "icon-stats-bars"
+},{
+    "text": "Upload settings",
+    "icon": "icon-wrench"
+},{
+    "text": "Events",
+    "icon": "icon-location"
+}]
