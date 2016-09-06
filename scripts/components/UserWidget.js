@@ -80,7 +80,7 @@ class UserWidget extends React.Component {
             <nav className="row">
               <ul className="nav nav-pills social-buttons">
                   {menuDetails.map((item, i) => {
-                      return <MenuButton current={this.checkIfActive(i)} details={item} onClick={this.toggleActive.bind(this, i)} key={i}/>
+                      return <MenuButton active={this.checkIfActive(i)} details={item} onClick={this.toggleActive.bind(this, i)} key={i}/>
                   }, this)}
                   <LikeButton liked={!!this.state.liked} details={likeDetails} onClick={this.toggleLiked.bind(this)} />
               </ul>

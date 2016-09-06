@@ -2,7 +2,7 @@ import React from 'react';
 
 class MenuButton extends React.Component {
     getActiveClass () {
-        return (!!this.props.current ? "current-item " : "");
+        return (!!this.props.active ? "current-item " : "");
     }
 
     render () {

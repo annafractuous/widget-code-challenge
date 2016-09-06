@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Components
+import MenuButton from './MenuButton';
+
 class LikeButton extends React.Component {
     getLikedClass () {
         return (!!this.props.liked ? "liked " : "");

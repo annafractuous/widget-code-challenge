@@ -8,16 +8,6 @@ import UserWidget from './UserWidget';
   App
 */
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      currentUser: {},
-      viewingUser: {},
-      menuDetails: [],
-      widgetDetails: []
-    }
-  }
-
   componentWillMount() {
     var users = require("../../resources/users.json"),
         uiContent = require("../../resources/uiContent.json");

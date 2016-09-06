@@ -8,17 +8,17 @@ class SidebarMenu extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            current: 0
+            active: 0
         }
     }
 
     checkIfActive (ref) {
-        return !!(this.state.current === ref);
+        return !!(this.state.active === ref);
     }
 
-    addActiveClass(i, event) {
-      event.preventDefault();
-      this.setState({ current: i });
+    makeActive(i, event) {
+        event.preventDefault();
+        this.setState({ active: i });
     }
 
     render () {
@@ -40,7 +40,7 @@ class SidebarMenu extends React.Component {
             <nav className="row">
               <ul className="nav nav-stacked">
                 {menuDetails.map((item, i) => {
-                    return <MenuButton current={this.checkIfActive(i)} details={item} onClick={this.addActiveClass.bind(this, i)} key={i}/>
+                    return <MenuButton active={this.checkIfActive(i)} details={item} onClick={this.makeActive.bind(this, i)} key={i}/>
                 }, this)}
               </ul>
             </nav>
