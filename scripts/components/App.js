@@ -11,15 +11,21 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      userDetails: [],
-      menuItems: []
+      currentUser: {},
+      viewingUser: {},
+      menuDetails: [],
+      widgetDetails: []
     }
   }
 
   componentWillMount() {
+    var users = require("../../resources/users.json"),
+        uiContent = require("../../resources/uiContent.json");
     this.setState({
-      userDetails: require("../../resources/users.json"),
-      menuItems: require("../../resources/sidebarMenu.json"),
+      currentUser: users["1"],
+      viewingUser: users["2"],
+      menuDetails: uiContent["sidebarMenu"],
+      widgetDetails: uiContent["userWidget"]
     })
   }
 
@@ -27,10 +33,10 @@ class App extends React.Component {
     return (
       <div>
         <div className="col-xs-12 col-sm-5 col-md-3 col-lg-3 widget-area">
-          <SidebarMenu menuItems={this.state.menuItems} user={this.state.userDetails["1"]} />
+          <SidebarMenu uiContent={this.state.menuDetails} user={this.state.currentUser} />
         </div>
         <div className="col-xs-12 col-sm-6 col-md-5 col-lg-5 widget-area">
-          <UserWidget user={this.state.userDetails["2"]} />
+          <UserWidget uiContent={this.state.widgetDetails} user={this.state.viewingUser} />
         </div>
       </div>
     )

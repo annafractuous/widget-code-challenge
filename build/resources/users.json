@@ -2,6 +2,7 @@
 
 {
     "1": {
+        "id": "1",
         "firstName": "Courtney",
         "lastName": "Timmons",
         "image": "../../resources/images/profile-avatar-1.jpg",
@@ -13,6 +14,7 @@
         "followers": "15,323"
     },
     "2": {
+        "id": "2",
         "firstName": "John",
         "lastName": "Raymons",
         "image": "../../resources/images/profile-avatar-2.jpg",

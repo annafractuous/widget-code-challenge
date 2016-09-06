@@ -9,7 +9,31 @@ class UserWidget extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            current: ''
+            current: '',
+            liked: true
+        }
+    }
+
+    componentWillMount () {
+        this.setWidgetValues();
+    }
+
+    componentWillUpdate () {
+        this.setWidgetValues();
+    }
+
+    setWidgetValues () {
+        var user = this.props.user,
+            menuDetails = this.props.uiContent,
+            values = {
+                "views": user.profileViews,
+                "comments": user.comments,
+                "likes": user.likes
+            };
+        for (var buttonType in menuDetails) {
+            menuDetails[buttonType].map(function(item){
+                item.text = values[item.id];
+            })
         }
     }
 
@@ -24,19 +48,18 @@ class UserWidget extends React.Component {
         });
     }
 
+    toggleLiked (event) {
+        event.preventDefault();
+        !this.state.liked ? this.props.user.likes++ : this.props.user.likes-- ;
+        this.setState({
+            liked: !this.state.liked
+        });
+    }
+
     render () {
-        // next question: where to best declare & how to best update these user details to pass to the widget
-        var user = this.props.user;
-        var buttonDeets = [
-            { text: user.profileViews,
-              icon: 'icon-eye' },
-            { text: user.comments,
-              icon: 'icon-bubble' }
-        ];
-        var likeDeets = {
-            text: user.likes,
-            icon: 'icon-heart'
-        };
+        var user = this.props.user,
+            menuDetails = this.props.uiContent.links,
+            likeDetails = this.props.uiContent.actions[0];
         return (
           <fieldset className="user-widget">
 
@@ -56,10 +79,10 @@ class UserWidget extends React.Component {
 
             <nav className="row">
               <ul className="nav nav-pills social-buttons">
-                  {buttonDeets.map((item, i) => {
+                  {menuDetails.map((item, i) => {
                       return <MenuButton current={this.checkIfActive(i)} details={item} onClick={this.toggleActive.bind(this, i)} key={i}/>
                   }, this)}
-                  <LikeButton details={likeDeets} />
+                  <LikeButton liked={!!this.state.liked} details={likeDetails} onClick={this.toggleLiked.bind(this)} />
               </ul>
             </nav>
 
