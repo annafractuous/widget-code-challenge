@@ -5,7 +5,14 @@
   font-weight: normal;
   font-style: normal;
 }
-.icon {
+.icon,
+.icon-location,
+.icon-bubble,
+.icon-user,
+.icon-wrench,
+.icon-stats-bars,
+.icon-eye,
+.icon-heart {
   color: #b1a599;
   font-family: 'icomoon' !important;
   speak: none;
@@ -85,25 +92,25 @@ body {
   background-color: #f7f7f7;
   border-radius: 0 0 5px 5px;
 }
-.sidebar-widget nav li {
+.sidebar-widget nav button {
   font-size: 1.2em;
   font-weight: 300;
-  padding: 22px 30px;
+  padding: 25px 30px;
 }
-.sidebar-widget nav li.current-item {
+.sidebar-widget nav button.current-item {
   background-color: #f6f0ec;
   border-left: 5px solid #4daf7c;
 }
-.sidebar-widget nav li.current-item span {
+.sidebar-widget nav button.current-item span {
   color: #e55f3a;
 }
-.sidebar-widget nav li:hover:not(.current-item) {
+.sidebar-widget nav button:hover:not(.current-item) {
   font-weight: 500;
 }
-.sidebar-widget nav li:hover:not(.current-item) span {
+.sidebar-widget nav button:hover:not(.current-item) span {
   color: #776b5e;
 }
-.sidebar-widget nav .icon {
+.sidebar-widget nav [class*='icon-'] {
   float: right;
 }
 body {
@@ -145,7 +152,10 @@ h5 {
   padding-left: 0;
   margin-top: 7px;
 }
-.user-widget section img {
+.user-widget section .image-wrapper {
+  min-height: 96px;
+}
+.user-widget section .image-wrapper img {
   position: absolute;
   left: 50%;
   width: 96px;
@@ -162,14 +172,14 @@ h5 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.social-buttons a {
+.social-buttons li {
   width: 100%;
 }
-.social-buttons a:hover,
-.social-buttons a:focus {
-  background-color: inherit;
+.social-buttons li:not(:first-child) button {
+  border-left: 1px solid #fff;
+  width: 98%;
 }
-.social-buttons a li {
+.social-buttons li button {
   height: 50px;
   color: #b1a599;
   font-size: 1.5em;
@@ -177,33 +187,31 @@ h5 {
   line-height: 50px;
   text-align: center;
 }
-.social-buttons a li:hover,
-.social-buttons a li:hover span,
-.social-buttons a li.current-item,
-.social-buttons a li.current-item span {
+.social-buttons li button:hover,
+.social-buttons li button:hover span,
+.social-buttons li button.current-item,
+.social-buttons li button.current-item span {
   color: #776b5e;
 }
-.social-buttons a li.liked,
-.social-buttons a li.liked span {
+.social-buttons li button.liked,
+.social-buttons li button.liked span {
   color: #e55f3a;
 }
-.social-buttons a:not(:first-child) li {
-  border-left: 1px solid #fff;
-  width: 98%;
-}
-.social-buttons .icon {
+.social-buttons li button [class*='icon-'] {
   padding-right: 10px;
   vertical-align: middle;
   margin-top: -5px;
 }
-.no-underline {
-  color: inherit;
-  padding: 0px !important;
+button {
+  background: transparent;
+  border: none;
+  line-height: 1;
+  text-align: inherit;
+  width: 100%;
+  padding: initial;
 }
-.no-underline:hover,
-.no-underline:focus {
-  color: inherit;
-  text-decoration: none;
+button:focus {
+  outline: none;
 }
 .img-padded {
   border: 1px solid #776b5e;

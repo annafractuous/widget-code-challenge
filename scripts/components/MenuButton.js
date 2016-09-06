@@ -5,18 +5,14 @@ class MenuButton extends React.Component {
         return (!!this.props.current ? "current-item " : "");
     }
 
-    getIconClass (icon) {
-        return "icon " + icon;
-    }
-
     render () {
         return (
-            <a href="#" className="no-underline" onClick={this.props.onClick}>
-            <li className={this.getActiveClass()}>
-                <span className={this.getIconClass(this.props.details.icon)} aria-hidden="true"></span>
+            <li>
+            <button className={this.getActiveClass()} onClick={this.props.onClick}>
+                <span className={this.props.details.icon} aria-hidden="true"></span>
                 {this.props.details.text}
+            </button>
             </li>
-            </a>
         )
     }
 }

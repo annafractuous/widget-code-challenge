@@ -1,12 +1,15 @@
 @require './_*.styl'
 
-// override Bootstrap link styling
-.no-underline
-  color inherit
-  padding 0px !important
-  &:hover, &:focus
-    color inherit
-    text-decoration none
+// override button styling
+button
+  background transparent
+  border none
+  line-height 1
+  text-align inherit
+  width 100%
+  padding initial
+  &:focus
+    outline none
 
 // round avatar image
 .img-padded

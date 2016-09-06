@@ -21,13 +21,15 @@
     // set margin equal to avatar image padding
     margin-top 7px
 
-  // horizontally center avatar
-  img
-    position absolute
-    left 50%
-    width 96px
-    height 96px
-    margin-left -(@width / 2)
+  .image-wrapper
+    min-height 96px
+    // horizontally center avatar
+    img
+      position absolute
+      left 50%
+      width 96px
+      height 96px
+      margin-left -(@width / 2)
 
 .social-buttons
   background-color light-tan
@@ -35,12 +37,15 @@
   display flex
   justify-content space-between
 
-  a
+  li
     width 100%
-    &:hover, &:focus
-      background-color inherit
 
-    li
+    &:not(:first-child)
+      button
+        border-left 1px solid white
+        width @width - 2px
+
+    button
       height 50px
       color light-brown
       font-size 1.5em
@@ -52,12 +57,7 @@
       &.liked, &.liked span
         color red
 
-    &:not(:first-child)
-      li
-        border-left 1px solid white
-        width @width - 2px
-
-  .icon
-    padding-right 10px
-    vertical-align middle
-    margin-top -5px
+      [class*='icon-']
+        padding-right 10px
+        vertical-align middle
+        margin-top -5px

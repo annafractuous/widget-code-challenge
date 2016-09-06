@@ -19,18 +19,14 @@ class LikeButton extends React.Component {
         return (!!this.state.liked ? "liked " : "");
     }
 
-    getIconClass (icon) {
-        return "icon " + icon;
-    }
-
     render () {
         return (
-            <a href="#" className="no-underline" onClick={this.toggleLiked.bind(this)}>
-            <li className={this.getLikedClass()}>
-                <span className={this.getIconClass(this.props.details.icon)} aria-hidden="true"></span>
+            <li>
+            <button className={this.getLikedClass()} onClick={this.toggleLiked.bind(this)}>
+                <span className={this.props.details.icon} aria-hidden="true"></span>
                 {this.props.details.text}
+            </button>
             </li>
-            </a>
         )
     }
 }
