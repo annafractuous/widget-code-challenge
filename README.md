@@ -9,6 +9,6 @@ Type `gulp` to see the widgets in your browser.
 
 **Demo:**
 
-![demo](http://g.recordit.co/iyD6otgrML.gif)
-
 ###### _Note: Toggling the 'like' button now increases & decreases the number of likes_
+
+![demo](http://g.recordit.co/iyD6otgrML.gif)

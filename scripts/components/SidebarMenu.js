@@ -28,13 +28,13 @@ class SidebarMenu extends React.Component {
         return (
           <fieldset className="sidebar-widget">
             <header className="row">
-              <div className="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+              <div className="col-lg-5 col-md-5 col-sm-5 col-xs-5 avatar">
                 <ProfilePic url={user.image}/>
               </div>
-              <div className="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+              <div className="col-lg-7 col-md-7 col-sm-7 col-xs-7 user-info">
                 <h4>{user.firstName}</h4>
                 <h4>{user.lastName}</h4>
-                <span className="subtitle">{user.followers} followers</span>
+                <p className="subtitle">{user.followers} followers</p>
               </div>
             </header>
             <nav className="row">

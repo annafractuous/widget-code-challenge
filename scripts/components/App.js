@@ -25,7 +25,7 @@ class App extends React.Component {
         <div className="col-xs-12 col-sm-5 col-md-3 col-lg-3 widget-area">
           <SidebarMenu uiContent={this.state.menuDetails} user={this.state.currentUser} />
         </div>
-        <div className="col-xs-12 col-sm-6 col-md-5 col-lg-5 widget-area">
+        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 widget-area">
           <UserWidget uiContent={this.state.widgetDetails} user={this.state.viewingUser} />
         </div>
       </div>

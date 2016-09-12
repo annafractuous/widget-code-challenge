@@ -84,9 +84,18 @@ body {
   border-radius: 5px 5px 0 0;
   padding: 20px 10px;
 }
-.sidebar-widget header h4 {
+.sidebar-widget header .user-info {
+  padding: 5% 10px;
+}
+.sidebar-widget header .user-info h4 {
   color: #fff;
   text-transform: uppercase;
+  font-size: 20px;
+  line-height: 0.9;
+}
+.sidebar-widget header .user-info .subtitle {
+  font-size: 15px;
+  margin-top: 7px;
 }
 .sidebar-widget nav {
   background-color: #f7f7f7;
@@ -95,7 +104,7 @@ body {
 .sidebar-widget nav button {
   font-size: 1.2em;
   font-weight: 300;
-  padding: 25px 30px;
+  padding: 18px 30px;
 }
 .sidebar-widget nav button.current-item {
   background-color: #f6f0ec;
@@ -123,6 +132,7 @@ h3,
 h4,
 h5 {
   font-weight: 500;
+  margin: 0;
 }
 .subtitle {
   font-weight: 300;
@@ -136,10 +146,10 @@ h5 {
 .user-widget nav {
   margin: 0px;
 }
-.user-widget header {
+.user-widget .cover-image {
   border-radius: 5px 5px 0 0;
 }
-.user-widget header img {
+.user-widget .cover-image img {
   border-radius: 5px 5px 0 0;
   min-width: 100%;
   min-height: 100%;
