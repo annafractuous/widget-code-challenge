@@ -63,17 +63,15 @@ class UserWidget extends React.Component {
         return (
           <fieldset className="user-widget">
 
-            <header className="row">
-              <img src={user.coverImage} alt="user-cover-image"/>
-            </header>
+            <header className="row cover-image"></header>
 
-            <section className="row">
-              <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 image-wrapper">
+            <section className="row user">
+              <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 avatar">
                 <ProfilePic url={user.image}/>
               </div>
-              <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-wrapper">
-                <h2>{user.firstName + " " + user.lastName}</h2>
-                <span className="subtitle">{user.tagline}</span>
+              <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8 user-info">
+                <h2 className="name">{user.firstName + " " + user.lastName}</h2>
+                <p className="subtitle">{user.tagline}</p>
               </div>
             </section>
 

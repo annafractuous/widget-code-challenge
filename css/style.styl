@@ -11,7 +11,12 @@ button
   &:focus
     outline none
 
-// round avatar image
+// round & horizontally centered avatar image
 .img-padded
-  border 1px solid dark-brown
+  position absolute
+  left 50%
+  width 96px
+  height 96px
+  margin-left -(@width / 2)
   padding 7px
+  border 1px solid dark-brown

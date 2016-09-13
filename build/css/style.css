@@ -79,32 +79,35 @@ body {
 .sidebar-widget nav {
   box-shadow: -2px -2px 16px -4px #776b5e;
 }
-.sidebar-widget header {
+.sidebar-widget .user {
   background-color: #b1a599;
   border-radius: 5px 5px 0 0;
   padding: 20px 10px;
 }
-.sidebar-widget header .user-info {
-  padding: 5% 10px;
+.sidebar-widget .user .avatar {
+  min-height: 96px;
 }
-.sidebar-widget header .user-info h4 {
+.sidebar-widget .user .user-info {
+  padding: 5% 10px 3% 10px;
+}
+.sidebar-widget .user .user-info .name {
   color: #fff;
   text-transform: uppercase;
   font-size: 20px;
   line-height: 0.9;
 }
-.sidebar-widget header .user-info .subtitle {
+.sidebar-widget .user .user-info .subtitle {
   font-size: 15px;
   margin-top: 7px;
 }
 .sidebar-widget nav {
-  background-color: #f7f7f7;
+  background-color: #fff;
   border-radius: 0 0 5px 5px;
 }
 .sidebar-widget nav button {
   font-size: 1.2em;
   font-weight: 300;
-  padding: 18px 30px;
+  padding: 17px 30px;
 }
 .sidebar-widget nav button.current-item {
   background-color: #f6f0ec;
@@ -146,33 +149,33 @@ h5 {
 .user-widget nav {
   margin: 0px;
 }
-.user-widget header {
+.user-widget .cover-image {
   border-radius: 5px 5px 0 0;
+  height: 225px;
+  background-image: url("../../resources/images/user-cover-img.jpg");
+  background-size: cover;
 }
-.user-widget header img {
-  border-radius: 5px 5px 0 0;
-  min-width: 100%;
-  min-height: 100%;
-  max-width: 100%;
+.user-widget .user {
+  padding: 30px 0;
 }
-.user-widget section {
-  padding: 20px 0;
-}
-.user-widget section h2 {
+.user-widget .user .name {
   padding-left: 0;
-  margin-top: 7px;
+  margin: 1px 0 10px 0;
 }
-.user-widget section .image-wrapper {
+.user-widget .user .avatar {
   min-height: 96px;
 }
-.user-widget section .image-wrapper img {
-  position: absolute;
-  left: 50%;
-  width: 96px;
-  height: 96px;
-  margin-left: -48px;
+.user-widget .user .avatar .img-padded {
+  border-color: #d4d0cb;
 }
-.social-buttons {
+.user-widget .user .user-info {
+  padding-left: 2px;
+}
+.user-widget .user .user-info .subtitle {
+  padding-left: 4px;
+  line-height: 1.5;
+}
+.user-widget .social-buttons {
   background-color: #f6f0ec;
   border-radius: 0 0 5px 5px;
   display: -webkit-box;
@@ -182,14 +185,14 @@ h5 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.social-buttons li {
+.user-widget .social-buttons li {
   width: 100%;
 }
-.social-buttons li:not(:first-child) button {
-  border-left: 1px solid #fff;
+.user-widget .social-buttons li:not(:first-child) button {
+  border-left: 2px solid #fff;
   width: 98%;
 }
-.social-buttons li button {
+.user-widget .social-buttons li button {
   height: 50px;
   color: #b1a599;
   font-size: 1.5em;
@@ -197,17 +200,17 @@ h5 {
   line-height: 50px;
   text-align: center;
 }
-.social-buttons li button:hover,
-.social-buttons li button:hover span,
-.social-buttons li button.current-item,
-.social-buttons li button.current-item span {
+.user-widget .social-buttons li button:hover,
+.user-widget .social-buttons li button:hover span,
+.user-widget .social-buttons li button.current-item,
+.user-widget .social-buttons li button.current-item span {
   color: #776b5e;
 }
-.social-buttons li button.liked,
-.social-buttons li button.liked span {
+.user-widget .social-buttons li button.liked,
+.user-widget .social-buttons li button.liked span {
   color: #e55f3a;
 }
-.social-buttons li button [class*='icon-'] {
+.user-widget .social-buttons li button [class*='icon-'] {
   padding-right: 10px;
   vertical-align: middle;
   margin-top: -5px;
@@ -224,6 +227,11 @@ button:focus {
   outline: none;
 }
 .img-padded {
-  border: 1px solid #776b5e;
+  position: absolute;
+  left: 50%;
+  width: 96px;
+  height: 96px;
+  margin-left: -48px;
   padding: 7px;
+  border: 1px solid #776b5e;
 }

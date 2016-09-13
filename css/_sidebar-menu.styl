@@ -3,41 +3,44 @@
   header, nav
     box-shadow -2px -2px 16px -4px dark-brown
 
-.sidebar-widget header
-  background-color light-brown
-  border-radius 5px 5px 0 0
-  padding 20px 10px
+  .user
+    background-color light-brown
+    border-radius 5px 5px 0 0
+    padding 20px 10px
 
-  .user-info
-    padding 5% 10px
+    .avatar
+      min-height 96px
 
-    h4
-      color white
-      text-transform uppercase
-      font-size 20px
-      line-height .9
+    .user-info
+      padding 5% 10px 3% 10px
 
-    .subtitle
-      font-size 15px
-      margin-top 7px
+      .name
+        color white
+        text-transform uppercase
+        font-size 20px
+        line-height .9
 
-.sidebar-widget nav
-  background-color light-grey
-  border-radius 0 0 5px 5px
+      .subtitle
+        font-size 15px
+        margin-top 7px
 
-  button
-    font-size 1.2em
-    font-weight 300
-    padding 18px 30px
-    &.current-item
-      background-color light-tan
-      border-left 5px solid green
-      span
-        color red
-    &:hover:not(.current-item)
-      font-weight 500
-      span
-        color dark-brown
+  nav
+    background-color white
+    border-radius 0 0 5px 5px
 
-  [class*='icon-']
-    float right
+    button
+      font-size 1.2em
+      font-weight 300
+      padding 17px 30px
+      &.current-item
+        background-color light-tan
+        border-left 5px solid green
+        span
+          color red
+      &:hover:not(.current-item)
+        font-weight 500
+        span
+          color dark-brown
+
+    [class*='icon-']
+      float right
