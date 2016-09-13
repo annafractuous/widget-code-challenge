@@ -146,10 +146,10 @@ h5 {
 .user-widget nav {
   margin: 0px;
 }
-.user-widget .cover-image {
+.user-widget header {
   border-radius: 5px 5px 0 0;
 }
-.user-widget .cover-image img {
+.user-widget header img {
   border-radius: 5px 5px 0 0;
   min-width: 100%;
   min-height: 100%;
